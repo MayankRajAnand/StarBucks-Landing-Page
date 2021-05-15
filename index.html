@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg ">
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa fa-bars" style="color:#017143; font-size:28px;"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">What's New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <h2>It's not just Coffee <br> It's <span class="sp">Starbucks</span> </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusantium dicta autem
+                        quam.
+                        Quaerat tempore, ad praesentium soluta natus id enim dicta quibusdam quis saepe nisi
+                        accusantium
+                        laborum perspiciatis hic.</p>
+                    <a class="link" href="#">Learn More</a>
+                </div>
+                <div class="imgbox">
+
+                    <img src="img/img1.png" class="starbucks" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="container d-flex justify-content-center thumb">
+
+            <div class="thumb1"> <img src=" img/thumb1.png" onclick="imgSlider('img/img1.png'); changeColor('#017143')"
+                    alt="">
+            </div>
+            <div class="thumb2"><img src="img/thumb2.png" onclick="imgSlider('img/img2.png'); changeColor('#eb7495')"
+                    alt="">
+            </div>
+            <div class="thumb3"><img class="rot" src="img/thumb3.png"
+                    onclick="imgSlider('img/img3.png'); changeColor('#d752b1')" alt="">
+            </div>
+
+        </div>
+
+        <ul class="sci">
+            <li><i class="fa fa-facebook fa-2x"></i></li>
+            <li><i class="fa fa-twitter fa-2x"></i></li>
+            <li><i class="fa fa-instagram fa-2x"></i></li>
+
+
+        </ul>
+
+    </section>
+
+
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything
+        }
+        function changeColor(color) {
+            const sci = document.querySelector('.sci');
+            const sp = document.querySelector('.sp');
+            const link = document.querySelector('.link');
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+            sp.style.color = color;
+            link.style.backgroundColor = color;
+            sci.style.backgroundColor = color;
+
+
+        }
+
+    </script>
+</body>
+
+</html>
